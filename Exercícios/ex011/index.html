@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente ou diminua o tamanho do seu navegador.</p> <!-- Cuidado com o Bounce Rate... ele é um mecânismo do Google para ver a satisfação do público ás páginas... caso você tenha muitos usuários saindo rapidamente do site, o google vai para de recomendar seu site para os usuários, por que a taxa de rejeição vai ser grande, o que é trágico! -->
+    <picture>
+        <source media="(max-width: 750px)" srcset="Imagens/foto-p.png" type="image/png"> <!-- Sempre que quiser abrir uma nova tag "source" devemos fazê-la em cima da ultima Tag, na ordem ... a sequência é de baixo para cima! -->
+        <source media="(max-width: 1050px)" srcset="Imagens/foto-m.png" type="image/png"> <!-- No "max-width" devemos colocar o tamanho da imagem abaixo, por que é como dizer "Olha, se o dispositivo não suportar na tela cheia 1000px (que é o tamanho da imagem abaixo), *então* abra essa imagem", praticamente é assim que funciona a Tag "Source"-->
+        <img src="Imagens/foto-g.png" alt="Imagem flexível"> <!-- Comece sempre pela foto maior ou pela menor, para ter um ponto de partida, assim vai criando os "source" acima para ir mudando a imagem dependendo do tamanho do dispositivo do usuário. -->
+    </picture>
+    <h1>Reproduzindo Audio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <audio src="midia/Coldplay-Hymn For The Weekend.mp3" controls autoplay></audio> <!-- Essa é a forma mais simples de introduzir o áudio... No entanto tem mt computador que não tem compatibilidade com o MP3 por ex... MP3, WAV, OGG são os tipos de áudio que são suportados em vários navegadores, por isso temos o jeito abaixo... -->
+    <audio preload="metadata" autoplay controls> <!-- O "preload" tem 3 opções: Auto = Só vai considerar que o site foi completamente aberto quando tudo foi carregado, inclusive o áudio, oq vai deixar pesado; Metadata = Vai apresentar apenas informações sobre a midia (recomendado) ; None = Não vai carregar nada, apenas quando o usuário apertar play; Temos tbm o "Autoplay" que na teoria teria que rodar assim que abrissemos o navegador; O "controls" que faz aparecer o botão de inicio do áudio e tudo mais; e "loop" que é quando terminar o áudio em questão, ele vai tocar de novo.. -->
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg"> <!-- Aqui, no caso, você colocou o mesmo áudio em formatos diferentes. Isso ajuda, caso o navegador não for compatível com algum tipo. O navegador vai tentar rodar o primeiro tipo (no caso, o mp3) e vai tentando até o último. -->
+        <source src="midia/guanacast-33.ogg" type="audio/ogg"> 
+        <source src="midia/guanacast-33.wav" type="audio/wav"> <!-- Evite, pois é MUITO pesado o tipo "wav", se quiser add um arquivo top na qualidade, deve ser para Download, e não para navegação. -->
+        <p>Infelizmente seu navegador não consegue reproduzir áudio :( <a href="midia/guanacast-33.mp3">Clique aqui para baixar o audio</a></p>
+    </audio>
+</body>
+</html>

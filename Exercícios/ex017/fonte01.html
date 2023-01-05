@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        body {
+            font-family:'Work Sans'Arial, Helvetica, sans-serif;
+            /*Medidas Absolutas W3C
+            cm, mm, in(polegadas), px(recomendado), pt (ponto), pc(paica)
+
+            Medidas Relativas
+            em(recomendado), ex, rem, vw, vh, %
+            16px geralmente = 1em
+            */
+            font-size: 16px ; /*Normalmente 16px é o tamanho normal das fontes*/
+            font-weight: normal; /* lighter, normal, bold, bolder ; ou de 100 - 900 */
+            font-style: italic; /* Podemos combinar possibilidades usando o 'weight' junto com o 'style', lembrando que não são todas as fontes que suportam essas "combinações".*/
+
+            /*weight(peso), width (largura), height(altura).*/
+        }
+        h1 {
+            /*font-family: 'Work Sans', sans-serif;
+            font-weight: bolder;
+            font-size: 3em;
+            font-style: italic;
+            É possivel juntar essas 4 configurações em 1 comando apenas, que é o shorthand "font"
+            Seguindo a ordem = font-style -> font-weight -> font-size -> font-family*/
+            font: italic bolder 3em 'work Sans', sans-serif;
+        }
+        h2 {
+            font: bold 2em 'Work Sans'
+        }
+    </style>
+   
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, placeat. Saepe at, eaque maxime exercitationem sapiente consectetur temporibus odit! Nisi libero quasi dicta perspiciatis delectus minus pariatur suscipit aliquid ad?. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem nesciunt, id quibusdam reiciendis cumque laudantium quam quidem magni inventore a earum, temporibus provident molestias ipsum accusantium doloremque aliquid quae obcaecati?</p>
+    <h2>Subtítulo do exercício</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium molestias asperiores quidem optio ut quos deleniti recusandae, ab sed unde adipisci quo assumenda officiis consequatur nulla minus et animi in?. fuga. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum ipsam ad vero nobis, aliquam reprehenderit necessitatibus cum provident asperiores quis repudiandae commodi perspiciatis ipsa? Quod architecto consequatur autem quam enim?</p>
+</body>
+</html>

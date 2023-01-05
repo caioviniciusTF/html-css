@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Crountch-One-Piece-Jolly-Roger-Shanks.ico" type="image/x-icon">
+    <title>Imagem Flexível</title>
+</head>
+<body>
+    <h1>Imagem Flexível</h1>
+    <p>Você está vendo a imagem completa? Experimente ampliar o tamanho da sua janela para aproveitar a melhor experiência! &#x1F92A;</p>
+    <picture>
+        <source media="(max-width: 740px)" srcset="imagens/paisagem-p.png" type="image/png"> <!--Não esquecer de: no "min-width:" colocar "max" para dar certo... qualquer dúvida, olhar o ex. 11 -->
+        <source media="(max-width: 1200px)" srcset="imagens/paisagem-m.png" type="image/png"><!--O "source" certo é o que tem "media:type"-->
+        <img src="imagens/paisagem-g.png" alt="imagem flexivel" srcset="">
+    </picture>
+</body>
+</html>
